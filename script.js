@@ -1,2 +1,8 @@
 let trainPoints = 0;
-const trainBtn = document.getElementById("train-btn");
+
+document.getElementById("train-btn").addEventListener("click", train);
+
+function train(){
+  alert ("training");
+}
+
