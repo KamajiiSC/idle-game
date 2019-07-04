@@ -16,7 +16,12 @@ function train(){
 };
 
 function glove(){
-
+  if(trainPoints >= 5){
+    trainPoints -= 5;
+    document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
+    gloveLvl++;
+    document.getElementById("glove-display").innerHTML= "Glove Level: " + gloveLvl;
+  }
 };
 
 
