@@ -1,3 +1,8 @@
 -Clicker Game
 -Train to do missions
 -More missions require more training points
+
+Plan for auto clicker
+Create auto level that adds all purchases similar to training dummy. Have a function set to true while the auto level is > 0 that uses setInterval() (setInterval(function, milliseconds, param1, param2, ...)) to run train every so often. 
+POSSIBLE CONFLICT
+If you call train from the training button and the auto function calls it at the same time possible confusion? probably nothing though.
