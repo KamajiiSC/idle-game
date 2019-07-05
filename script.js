@@ -1,5 +1,6 @@
 let trainPoints = 0;
 let gloveLvl = 1;
+let dummyLvl = 0;
 
 document.getElementById("train-btn").addEventListener("click", train);
 document.getElementById("glove-btn").addEventListener("click", glove);
