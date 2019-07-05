@@ -5,6 +5,8 @@ let dummyLvl = 0;
 // Event Listeners for the buttons
 document.getElementById("train-btn").addEventListener("click", train);
 document.getElementById("glove-btn").addEventListener("click", glove);
+document.getElementById("dummy-btn").addEventListener("click", dummy);
+
 
 // Training function 
 function train(){
@@ -12,7 +14,7 @@ function train(){
   for (i= 0; i < gloveLvl; i++){
     trainPoints++;
   }
-  
+
   // Updates the training points display
   document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
 };
@@ -26,6 +28,8 @@ function glove(){
     document.getElementById("glove-display").innerHTML= "Glove Level: " + gloveLvl;
   }
 };
+
+
 
 
 
