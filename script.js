@@ -1,7 +1,7 @@
 let trainPoints = 0;
 let gloveLvl = 1;
 let dummyLvl = 0;
-let autoMultiplier = dummyLvl;
+let autoMultiplier = 0;
 let autoClicker;
 
 // Event Listeners for the buttons
@@ -45,11 +45,13 @@ function dummy(){
     // Updates Training Points display
     document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
     dummyLvl++;
-    autoMultiplier = dummyLvl;
+    // Increments autoMultiplier with dummyLvl
+    autoMultiplier++;
     // Updates Training Dummy Level
     document.getElementById("dummy-display").innerHTML= "Training Dummy Level: " + dummyLvl;
   }
 
+  // Clear autoClicker's current interval and assign a new one
   clearInterval(autoClicker);
   autoClicker = setInterval(function(){train(autoMultiplier)}, 3000);
 };
