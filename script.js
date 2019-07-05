@@ -3,21 +3,26 @@ let gloveLvl = 1;
 let dummyLvl = 0;
 
 // Event Listeners for the buttons
-document.getElementById("train-btn").addEventListener("click", train);
+document.getElementById("train-btn").addEventListener("click", trainClick);
 document.getElementById("glove-btn").addEventListener("click", glove);
 document.getElementById("dummy-btn").addEventListener("click", dummy);
 
 
 // Training function 
-function train(){
-  // Increments trainPoints by the gloveLvl each time "Train!" is pressed
-  for (i= 0; i < gloveLvl; i++){
+function train(multiplier){
+  // Increments trainPoints by the multiplier each time train() is called
+  for (i= 0; i < multiplier; i++){
     trainPoints++;
   }
 
   // Updates the training points display
   document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
 };
+
+// Function runs on Train! click and calls train() but allows param to be passed
+function trainClick(){
+  train(gloveLvl);
+}
 
 // Function to increment gloveLvl, if you have atleast 5 trainPoints it removes 5 and increments gloveLvl
 function glove(){
