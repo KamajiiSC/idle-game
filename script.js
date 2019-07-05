@@ -5,7 +5,7 @@ let autoMultiplier = 0;
 let autoClicker;
 
 // Event Listeners for the buttons
-document.getElementById("train-btn").addEventListener("click", trainClick);
+document.getElementById("train-btn").addEventListener("click", function(){train(gloveLvl)});
 document.getElementById("glove-btn").addEventListener("click", glove);
 document.getElementById("dummy-btn").addEventListener("click", dummy);
 
@@ -20,11 +20,6 @@ function train(multiplier){
   // Updates the training points display
   document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
 };
-
-// Function runs on Train! click and calls train() but allows param to be passed
-function trainClick(){
-  train(gloveLvl);
-}
 
 // Function to increment gloveLvl, if you have atleast 5 trainPoints it removes 5 and increments gloveLvl
 function glove(){
@@ -53,5 +48,5 @@ function dummy(){
 
   // Clear autoClicker's current interval and assign a new one
   clearInterval(autoClicker);
-  autoClicker = setInterval(function(){train(autoMultiplier)}, 3000);
+  autoClicker = setInterval(function(){train(autoMultiplier)}, 1000);
 };
