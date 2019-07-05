@@ -23,17 +23,22 @@ function train(){
 function glove(){
   if(trainPoints >= 5){
     trainPoints -= 5;
+    // Updates Training Points display 
     document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
     gloveLvl++;
+    // Updates Glove Level display
     document.getElementById("glove-display").innerHTML= "Glove Level: " + gloveLvl;
   }
 };
 
+// Function to increment dummyLvl similar to glove() 
 function dummy(){
   if(trainPoints >= 20){
-    trainPoints -= 5;
+    trainPoints -= 20;
+    // Updates Training Points display
     document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
     dummyLvl++;
+    // Updates Training Dummy Level
     document.getElementById("dummy-display").innerHTML= "Training Dummy Level: " + dummyLvl;
   }
 }
