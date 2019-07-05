@@ -1,9 +1,6 @@
 let trainPoints = 0;
 let gloveLvl = 1;
 
-document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
-document.getElementById("glove-display").innerHTML= "Glove Level: " + gloveLvl;
-
 document.getElementById("train-btn").addEventListener("click", train);
 document.getElementById("glove-btn").addEventListener("click", glove);
 
