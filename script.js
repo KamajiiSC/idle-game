@@ -29,7 +29,11 @@ function glove(){
   }
 };
 
-
-
-
-
+function dummy(){
+  if(trainPoints >= 20){
+    trainPoints -= 5;
+    document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
+    dummyLvl++;
+    document.getElementById("dummy-display").innerHTML= "Training Dummy Level: " + dummyLvl;
+  }
+}
