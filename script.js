@@ -1,5 +1,6 @@
 let trainPoints = 0;
 let gloveLvl = 1;
+let multipliers = 0;
 let trainAmt = gloveLvl * multipliers;
 let dummyLvl = 0;
 let autoMultiplier = 0;
