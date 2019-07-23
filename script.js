@@ -55,6 +55,7 @@ function dummy(){
 
 function sword(){
   if(trainPoints >= 200){
-
+    trainPoints -= 200;
+    multipliers += 5;
   }
 }
