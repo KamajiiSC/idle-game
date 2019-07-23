@@ -8,6 +8,7 @@ let autoClicker;
 document.getElementById("train-btn").addEventListener("click", function(){train(gloveLvl)});
 document.getElementById("glove-btn").addEventListener("click", glove);
 document.getElementById("dummy-btn").addEventListener("click", dummy);
+document.getElementById("sword-btn").addEventListener("click", sword);
 
 // Training function 
 function train(multiplier){
