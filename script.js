@@ -9,7 +9,6 @@ document.getElementById("train-btn").addEventListener("click", function(){train(
 document.getElementById("glove-btn").addEventListener("click", glove);
 document.getElementById("dummy-btn").addEventListener("click", dummy);
 
-
 // Training function 
 function train(multiplier){
   // Increments trainPoints by the multiplier each time train() is called
