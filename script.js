@@ -1,5 +1,6 @@
 let trainPoints = 0;
 let gloveLvl = 1;
+let trainAmt = gloveLvl * multipliers;
 let dummyLvl = 0;
 let autoMultiplier = 0;
 let autoClicker;
@@ -53,6 +54,6 @@ function dummy(){
 
 function sword(){
   if(trainPoints >= 200){
-    
+
   }
 }
