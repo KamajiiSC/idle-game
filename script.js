@@ -50,3 +50,9 @@ function dummy(){
   clearInterval(autoClicker);
   autoClicker = setInterval(function(){train(autoMultiplier)}, 1000);
 };
+
+function sword(){
+  if(trainPoints >= 200){
+    
+  }
+}
