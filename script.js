@@ -1,13 +1,13 @@
 let trainPoints = 0;
 let gloveLvl = 1;
-let multipliers = 0;
+let multipliers = 1;
 let trainAmt = gloveLvl * multipliers;
 let dummyLvl = 0;
 let autoMultiplier = 0;
 let autoClicker;
 
 // Event Listeners for the buttons
-document.getElementById("train-btn").addEventListener("click", function(){train(gloveLvl)});
+document.getElementById("train-btn").addEventListener("click", function(){train(trainAmt)});
 document.getElementById("glove-btn").addEventListener("click", glove);
 document.getElementById("dummy-btn").addEventListener("click", dummy);
 document.getElementById("sword-btn").addEventListener("click", sword);
@@ -30,6 +30,7 @@ function glove(){
     // Updates Training Points display 
     document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
     gloveLvl++;
+    trainAmt = gloveLvl * multipliers;
     // Updates Glove Level display
     document.getElementById("glove-display").innerHTML= "Glove Level: " + gloveLvl;
   }
@@ -54,8 +55,11 @@ function dummy(){
 };
 
 function sword(){
-  if(trainPoints >= 200){
+  if(trainPoints > 199){
     trainPoints -= 200;
-    multipliers += 5;
+    multipliers += 4;
+    trainAmt = gloveLvl * multipliers;
+     // Updates the training points display
+  document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
   }
 }
