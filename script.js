@@ -5,6 +5,7 @@ let trainAmt = gloveLvl * multipliers;
 let dummyLvl = 0;
 let autoMultiplier = 0;
 let autoClicker;
+let swordBought = false;
 
 // Event Listeners for the buttons
 document.getElementById("train-btn").addEventListener("click", function(){train(trainAmt)});
@@ -19,12 +20,17 @@ function train(multiplier){
     trainPoints++;
   }
 
+  
+
   // Updates the training points display
   document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
-  if(trainPoints > 199){
-    document.getElementById("sword-btn").classList.remove(hidden-btn);
+
+  if(trainPoints > 199  && swordBought == false){
+    document.getElementById("sword-btn").classList.remove("hidden");
   }
 };
+
+function fuckyourself(){}
 
 // Function to increment gloveLvl, if you have atleast 5 trainPoints it removes 5 and increments gloveLvl
 function glove(){
@@ -63,6 +69,8 @@ function sword(){
     multipliers += 4;
     trainAmt = gloveLvl * multipliers;
      // Updates the training points display
-  document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
+    document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
+    swordBought = true;
+    document.getElementById("sword-btn").classList.add("hidden");
   }
 }
