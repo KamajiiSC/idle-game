@@ -21,6 +21,9 @@ function train(multiplier){
 
   // Updates the training points display
   document.getElementById("train-display").innerHTML= "Training Points: " + trainPoints;
+  if(trainPoints > 199){
+    document.getElementById("sword-btn").classList.remove(hidden-btn);
+  }
 };
 
 // Function to increment gloveLvl, if you have atleast 5 trainPoints it removes 5 and increments gloveLvl
